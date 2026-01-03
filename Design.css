@@ -1,133 +1,429 @@
-*{
-  box-sizing: border-box;
-}
-
 body{
-  margin: 0;
-  min-height: 100vh;
-  background-color: bisque;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding: 0px;
+    background-color: bisque;
 }
-
-/* Calculator Body */
 #calculatorbody{
-  width: 90vw;
-  max-width: 420px;
-  background: #292929;
-  border-radius: 10px;
-  border: 2px solid grey;
-  box-shadow: 0 0 20px black;
-  user-select: none;
-  padding: 10px;
+    /* margin: 100px 0px 0px 300px; */
+    background: #292929;
+    width: 500px;
+    height: 450px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    display: block;
+    box-shadow: 0px 0px 20px black;
+    user-select: none;
+    position: fixed;
 }
-
-/* Header */
 #name{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
+    background-color: black;
+    height: 40px;
+    width: 490px;
+    border-radius: 10px;
+    margin: 5px 5px -40px 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: default;
 }
-
-/* Display */
 #display{
-  width: 100%;
-  height: 80px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 22px;
-  color: white;
-  background-color: #292929;
+    background-color: #292929;
+    height: 100px;
+    width: 475px;
+    border-radius: 10px;
+    margin: 50px 10px 0px 10px;
+    border: 3px solid #292929;
+    outline: solid #292929;
+    text-indent: 8px;
+    cursor: text;
+    align-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    user-select: none;
 }
-
-/* Functions */
 #functions{
-  margin-top: 10px;
+    background-color: #292929;
+    width: 480px;
+    height: 270px;
+    border-radius: 10px;
+    margin: 10px;
+    display: block;
+    /* border: 2px solid black; */
 }
-
-/* Buttons common */
-button{
-  border-radius: 10px;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
+#del{
+    background-color: #4B4B4B;
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 5px;
+    border: 2px solid #4B4B4B;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor:pointer;
 }
-
-/* Top buttons */
-.top-buttons{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 5px;
+#del:active{
+    background: linear-gradient(#6b6b6b);
 }
-
-#del, #cross{
-  background-color: #4B4B4B;
-  height: 45px;
+#cross{
+    background-color: #4B4B4B;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    border: 2px solid #4B4B4B;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor:pointer;
 }
-
-/* Operations */
+#cross:active{
+    background: linear-gradient(#6b6b6b);
+}
 #operations{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-  margin-top: 8px;
+    background-color: #292929;
+    height: 40px;
+    width: 470px;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    gap: 2px;
 }
-
-#operations button{
-  background-color: #B35A25;
-  height: 45px;
+#plus{
+    background-color: #B35A25;
+    height: 40px;
+    width: 116px;
+    border-radius: 10px;
+    border: 2px solid #B35A25;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
 }
-
-/* Numbers */
+#plus:active{
+    background: linear-gradient(#e0814a);
+}
+#minus{
+    background-color: #B35A25;
+    height: 40px;
+    width: 116px;
+    border-radius: 10px;
+    border: 2px solid #B35A25;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#minus:active{
+    background: linear-gradient(#e0814a);
+}
+#multiply{
+    background-color: #B35A25;
+    height: 40px;
+    width: 116px;
+    border-radius: 10px;
+    border: 2px solid #B35A25;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#multiply:active{
+    background: linear-gradient(#e0814a);
+}
+#divide{
+    background-color: #B35A25;
+    height: 40px;
+    width: 116px;
+    border-radius: 10px;
+    border: 2px solid #B35A25;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#divide:active{
+    background: linear-gradient(#e0814a);
+}
 #numbers{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  margin-top: 8px;
+    background-color: #292929;
+    height: 110px;
+    width: 470px;
+    border-radius: 10px;
+    margin: 5px;
+    display: inline-block;
 }
-
-#numbers button{
-  background-color: #303030;
-  height: 45px;
+#btn0{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
 }
-
-/* Bottom buttons */
-.bottom-buttons{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  margin-top: 8px;
+#btn0:active{
+    background: linear-gradient(#474747);
 }
-
-#point, #equal{
-  background-color: #4B4B4B;
-  height: 45px;
+#btn1{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
 }
-
-/* Active */
-button:active{
-  opacity: 0.8;
+#btn1:active{
+    background: linear-gradient(#474747);
 }
-
-/* Mobile small screens */
-@media (max-width: 400px){
-  #name{
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-  button{
-    font-size: 18px;
-  }
+#btn2{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn2:active{
+    background: linear-gradient(#474747);
+}
+#btn3{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn3:active{
+    background: linear-gradient(#474747);
+}
+#btn4{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn4:active{
+    background: linear-gradient(#474747);
+}
+#btn5{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn5:active{
+    background: linear-gradient(#474747);
+}
+#btn6{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn6:active{
+    background: linear-gradient(#474747);
+}
+#btn7{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn7:active{
+    background: linear-gradient(#474747);
+}
+#btn8{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn8:active{
+    background: linear-gradient(#474747);
+}
+#btn9{
+    background-color: #303030;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 2px solid #303030;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#btn9:active{
+    background: linear-gradient(#474747);
+}
+#point{
+    background-color: #4B4B4B;
+    height: 40px;
+    width: 240px;
+    border-radius: 10px;
+    margin: -5px 5px 5px 5px;
+    border: 2px solid #4B4B4B;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#point:active{
+    background: linear-gradient(#6b6b6b);
+}
+#equal{
+    background-color: #4B4B4B;
+    height: 40px;
+    width: 220px;
+    border-radius: 10px;
+    border: 2px solid #4B4B4B;
+    margin: -5px 0px 0px 0px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    letter-spacing: 15px;
+    text-indent: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#equal:active{
+    background: linear-gradient(#6b6b6b);
 }
