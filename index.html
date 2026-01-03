@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="Design.css" />
-    <link rel="icon" href="Calculator.png">
-    <script src="Functioning.js"></script>
-  </head>
-  <body>
-    <div id="calculatorbody">
-      <div id="name">&reg; Made by Saad &copy;</div>
-      <input id="display" value="" placeholder="Made by Saad" required readonly>
-      <div id="functions">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Design.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="Calculator.png" />
+
+  <!-- JS -->
+  <script src="Functioning.js" defer></script>
+</head>
+
+<body>
+  <div id="calculatorbody">
+
+    <div id="name">&reg; Made by Saad &copy;</div>
+
+    <input
+      type="text"
+      id="display"
+      placeholder="Made by Saad"
+      readonly
+    />
+
+    <div id="functions">
+
+      <div class="top-buttons">
         <button id="del" onclick="del()">DEL</button>
         <button id="cross" onclick="cross()">×</button>
-
-        <div id="operations">
-          <button id="plus" value="+" onclick="plus()">+</button>
-          <button id="minus" value="-" onclick="minus()">&minus;</button>
-          <button id="multiply" value="*" onclick="multiply()">&times;</button>
-          <button id="divide" value="/" onclick="divide()">&divide;</button>
-        </div>
-
-        <div id="numbers">
-          <button id="btn0" value="0" onclick="n0()">0</button>
-          <button id="btn1" value="1" onclick="n1()">1</button>
-          <button id="btn2" value="2" onclick="n2()">2</button>
-          <button id="btn3" value="3" onclick="n3()">3</button>
-          <button id="btn4" value="4" onclick="n4()">4</button>
-          <button id="btn5" value="5" onclick="n5()">5</button>
-          <button id="btn6" value="6" onclick="n6()">6</button>
-          <button id="btn7" value="7" onclick="n7()">7</button>
-          <button id="btn8" value="8" onclick="n8()">8</button>
-          <button id="btn9" value="9" onclick="n9()">9</button>
-        </div>
-
-        <button id="point" value="." onclick="point()">.</button>
-        <button id="equal" value="=" onclick="equal()">=</button>
       </div>
+
+      <div id="operations">
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">−</button>
+        <button onclick="multiply()">×</button>
+        <button onclick="divide()">÷</button>
+      </div>
+
+      <div id="numbers">
+        <button onclick="n7()">7</button>
+        <button onclick="n8()">8</button>
+        <button onclick="n9()">9</button>
+        <button onclick="n4()">4</button>
+        <button onclick="n5()">5</button>
+        <button onclick="n6()">6</button>
+        <button onclick="n1()">1</button>
+        <button onclick="n2()">2</button>
+        <button onclick="n3()">3</button>
+        <button onclick="n0()">0</button>
+      </div>
+
+      <div class="bottom-buttons">
+        <button id="point" onclick="point()">.</button>
+        <button id="equal" onclick="equal()">=</button>
+      </div>
+
     </div>
-  </body>
+  </div>
+</body>
 </html>
